@@ -1,9 +1,16 @@
 import express from "express";
-import dotenv from "dotenv";
 import cors from "cors";
-dotenv.config();
+import starRouter from "./routers/starRouter.js";
 
 const app = express();
 
-app.listen(process)
+app.use(cors());
+app.use(express.json());
 
+app.use(starRouter);
+
+const PORT = 5009;
+
+app.listen(PORT, () => {
+    console.log("Server on");
+})
